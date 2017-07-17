@@ -1,0 +1,442 @@
+*{
+    /* to normalize some behaviors */
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../backgroundImage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+/* Header style*/
+.logoAndSlogan {
+    position: fixed;
+    cursor: default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+
+    top: 5px;
+    left: 15px;
+    color: #fff;
+    font-weight: 100;
+    font-family: 'Allura', sans-serif !important;
+    font-size: 30px;
+}
+.logoAndSlogan .r{
+    font-size: 55px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.home-page-link {
+    text-decoration: none !important;
+    color:inherit !important;
+    text-decoration: inherit;
+}
+/* End of header style */
+
+/* Home page style */
+.btns-flex-warpper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    height: 100vh;
+}
+.btns-flex-warpper > div{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.btns-flex-warpper > div > button {
+    display: block;
+    background-color: transparent !important;
+    padding: 30px 200px;
+    font-size: 35px;
+    border: none;
+    box-shadow: none;
+    text-shadow: none !important;
+    background-image: none !important;
+    color: #fff;
+    min-width: 300px;
+    margin: 0;
+    transition: .24s;
+}
+
+.btns-flex-warpper > div > button:nth-child(1){border-radius: 3px 3px 0 0}
+.btns-flex-warpper > div > button:nth-child(3){border-radius: 0 0 3px 3px}
+.btns-flex-warpper > div > button:hover,
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default,
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover{
+    color: #fff !important;
+}
+.btns-flex-warpper > div > button:hover{
+    background-color: rgba(9, 9, 9, .7) !important;
+    cursor: pointer
+}
+
+.btns-flex-warpper > div > button:active,
+.btns-flex-warpper > div > button:focus{
+    outline: 0 !important;
+}
+
+.btns-flex-warpper > div > hr{
+    width: 100%;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+/* End of home page style */
+
+/* Restaurant details style */
+.single-rest-warpper{
+    width: 65%;
+    background: rgba(9, 9, 9, .7);
+    border-radius: 3px;
+    color: #fff;
+    margin: 15vh auto;
+}
+.single-rest-warpper .first-section .left-side{
+    width: 30%;
+    padding: 15px;
+    display: inline-block;
+}
+.single-rest-warpper .first-section .left-side .rest-logo{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: auto;
+    border-radius: 100%;
+}
+.single-rest-warpper .first-section .right-side{
+    width: 70%;
+    padding: 15px;
+    float: right;
+    position: relative
+}
+.single-rest-warpper .first-section .right-side h3{
+    font-size: 35px;
+    position: relative;
+    display: inline-block;
+}
+.single-rest-warpper .first-section .right-side h3 span.isOpen{
+    position: absolute;
+    left: 105%;
+    top: 50%;
+    color: #fff;
+    font-weight: bold;
+    background-color: #2ecc71;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    display: block;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+}
+.single-rest-warpper .first-section .right-side h3 span.isClosed{
+    position: absolute;
+    left: 105%;
+    top: 50%;
+    color: #fff;
+    font-weight: bold;
+    background-color: #e74c3c;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    display: block;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+}
+.single-rest-warpper .first-section .right-side .rating{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50%;
+    background: #2ecc71;
+    display: flex;
+}
+.single-rest-warpper .first-section .right-side .rating span{
+    display: block;
+    font-size: 16px;
+    margin: auto
+}
+
+.info {
+    font-size: 12px;
+}
+
+.info .left-info-side{
+    width: 50%;
+    display: inline-block;
+}
+.info .left-info-side > span{
+    display: block;
+}
+.cat-label{
+    background-color: #f1a30c;
+    padding: 5px;
+    color: #fff;
+    border-radius: 3px;
+}
+.cat-label img.rest-cat-logo{
+    width: 20px;
+    position: relative;
+    bottom: -5px;
+    right: -3px;
+}
+.info .left-info-side > span > span.type{
+    text-transform: uppercase;
+}
+.dollars{
+    font-size: 16px;
+    display: block;
+    margin-top: 15px
+}
+.info .right-info-side{
+    width: 50%;
+    float: right;
+    position: relative;
+}
+.info .right-info-side .distance{
+    display: block;
+    margin-top: 10px;
+}
+
+.reviews {margin-bottom: 30px;}
+.reviews ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.reviews ul li{
+    padding: 10px 20px;
+    border-top: 1px solid #eee;
+    display: flex
+}
+.reviews ul li .avatar{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 100%;
+}
+.reviews ul li .text{
+    width: 50%;
+    margin: auto;
+    margin-left: 10px;    
+}
+.reviews ul li .text span.name{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold
+}
+.reviews ul li .text span.desc{
+    font-size: 12px;
+}
+.new-review{
+    padding: 15px;
+    position: relative;
+}
+.new-review textarea{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+    color: #333;
+}
+.new-review button{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    background: #2ecc71;
+    color: #fff;
+    transition: .14s;
+    border: 0;
+    padding: 7px 15px;
+    border-radius: 3px;
+}
+.new-review button:focus,
+.new-review button:hover{
+    background: #38de7f;
+    color: #fff;
+    outline: 0;
+    cursor: pointer;
+}
+
+/* End of restaurant details style */
+
+/* Restaurant list style */
+.rest-list{
+    padding: 0;
+    list-style-type: none;
+    width: 55%;
+    color: #fff;
+    margin: 15vh auto;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.rest-list li{
+    background: rgba(9, 9, 9, .7);
+    border-bottom: 1px solid rgba(238, 238, 238, 0.38);
+    position: relative;
+    transition: .14s;
+}
+.rest-list li:last-of-type{
+    border-bottom: 0;
+}
+.rest-list li:hover{
+    background: rgba(9, 9, 9, .8);
+    cursor: pointer
+}
+.rest-list .left-side{
+    width: 20%;
+    padding: 15px;
+    float: left;
+}
+.rest-list .left-side .rest-logo{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: auto;
+    border-radius: 100%;
+}
+.rest-list .right-side{
+    width: 75%;
+    padding: 15px;
+    float: left;
+}
+.rest-list .right-side h3{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block
+}
+.rest-list .right-side h3 span.isOpen{
+    position: absolute;
+    left: 105%;
+    top: 50%;
+    color: #fff;
+    font-weight: bold;
+    background-color: #2ecc71;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    display: block;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+}
+.rest-list .right-side h3 span.isClosed{
+    position: absolute;
+    left: 105%;
+    top: 50%;
+    color: #fff;
+    font-weight: bold;
+    background-color: #e74c3c;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    display: block;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+}
+.rest-list .rating{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    border-radius: 50%;
+    background: #2ecc71;
+    display: flex;
+    transform: translateY(-50%)
+}
+.rest-list .rating.green{background: #2ecc71;}
+.rest-list .rating.yellow{background: #f1c40f;}
+.rest-list .rating.red{background: #e74c3c;}
+
+
+.rest-list .rating span{
+    display: block;
+    font-size: 16px;
+    margin: auto
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+.notice{
+    width: 400px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(9, 9, 9, .8);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 3px;
+}
+.notice span{
+    display: block;
+    margin: auto;
+}
+
+.drive-to{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    position: absolute;
+    left: -40px;
+    top: 0;
+}
+.drive-to img{
+    width: 100%
+}
+
+
+
+/* End of restaurant list style */
+
+.custom_container {
+    height: 100vh;
+}​
