@@ -3,8 +3,9 @@
  */
 // The CLIENT_SECRET is somewhere safe ;)
 export const CLIENT_ID = '2GGJHKFQTBZAMYSBOVN0CRNJ0OEKC2XCESRAZOXNN10NQ0Y4';
-export const userDefaultImage = '/userDefaultImage.png';
-export const restaurantDefaultImage = '/restaurantDefaultImage.png';
+export const USER_DEFAULT_IMAGE = '/userDefaultImage.png';
+export const RESTAURANT_DEFAULT_IMAGE = '/restaurantDefaultImage.png';
+export const NAVIGATION_ICON = '/navigationIcon.svg';
 export const WEBSITE_URL = 'https://d22ahu1y45ifjf.cloudfront.net/';
 
 // PAGES

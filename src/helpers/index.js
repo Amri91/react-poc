@@ -1,4 +1,4 @@
-import {restaurantDefaultImage} from '../globals';
+import {RESTAURANT_DEFAULT_IMAGE} from '../globals';
 
 /**
  * Returns an image source for a restaurant
@@ -7,7 +7,7 @@ import {restaurantDefaultImage} from '../globals';
  * @returns {string}
  */
 export function getImageSource(imageGroup) {
-    return imageGroup ? `${imageGroup.items[0].prefix}${imageGroup.items[0].height}x${imageGroup.items[0].width}${imageGroup.items[0].suffix}` : restaurantDefaultImage;
+    return imageGroup ? `${imageGroup.items[0].prefix}${imageGroup.items[0].height}x${imageGroup.items[0].width}${imageGroup.items[0].suffix}` : RESTAURANT_DEFAULT_IMAGE;
 }
 
 /**

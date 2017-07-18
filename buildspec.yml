@@ -10,7 +10,7 @@ phases:
       - docker run --rm --name building-the-app -v $(pwd):/usr/src/app -w /usr/src/app node:latest sh deploymentScripts/npmInstallAndBuild.sh
       - mkdir dist -p
       - cp -R style/ dist/
-      - cp backgroundImage.jpg bundle.js index.html favicon.ico userDefaultImage.png restaurantDefaultImage.png -t dist/
+      - cp backgroundImage.jpg bundle.js index.html favicon.ico userDefaultImage.png restaurantDefaultImage.png navigationIcon.svg -t dist/
   build:
     commands:
       - echo Build started on `date`

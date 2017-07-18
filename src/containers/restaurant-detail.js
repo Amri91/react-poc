@@ -5,7 +5,7 @@ import Loader from 'react-loader';
 import { Link } from 'react-router-dom';
 
 import { getImageSource, getRatingClass, getRestStatusClass, getRestStatusText, getRestCategoryImage, getDirections } from '../helpers';
-import { userDefaultImage, AUTH_SERVER, SPINNER_OPTIONS, TRANSITION_OPTIONS } from '../globals';
+import { USER_DEFAULT_IMAGE, AUTH_SERVER, SPINNER_OPTIONS, TRANSITION_OPTIONS, NAVIGATION_ICON } from '../globals';
 
 /**
  * This container handles restaurant details
@@ -69,7 +69,7 @@ class RestaurantDetail extends Component {
      */
     renderReview(item) {
         if(item){
-            const img = item.user.photo ? `${item.user.photo.prefix}300x300${item.user.photo.suffix}` : userDefaultImage;
+            const img = item.user.photo ? `${item.user.photo.prefix}300x300${item.user.photo.suffix}` : USER_DEFAULT_IMAGE;
             return (
                 <li key={item.id}>
                     <div className="avatar" style={{backgroundImage: 'url('+img+')' }} />
@@ -135,7 +135,7 @@ class RestaurantDetail extends Component {
                                 </span>
                             </div>
                             <div className="right-info-side">
-                                {venue.location && <a href={getDirections(venue.location)} className="drive-to"><img src="/placeholder.svg" alt="" /></a>}
+                                {venue.location && <a href={getDirections(venue.location)} className="drive-to"><img src={NAVIGATION_ICON} alt="" /></a>}
                                 <span className="address">{venue.location ? venue.location.formattedAddress.join('-') : ''}</span>
                                 <span className="distance">{venue.location.distance} feet away from you</span>
                             </div>
