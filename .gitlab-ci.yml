@@ -1,0 +1,35 @@
+image: node:latest
+
+before_script:
+  - npm -v
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  artifacts:
+    paths:
+      - dist
+  script:
+    - npm install
+    - npm run build
+
+production:
+  dependencies:
+    - build
+  type: deploy
+  before_script:
+  - apt-get update
+  - apt-get -qq install python python-pip ca-certificates
+  - pip install awscli
+  script:
+  - aws s3 sync --delete ./dist s3://$AWS_BUCKET
+  artifacts:
+    paths:
+    - dist
